@@ -10,6 +10,13 @@ In this second and final stage, I've added additional functionality to the app I
 - make use of Android Architecture Components (Room, LiveData, ViewModel and Lifecycle) to create a robust an efficient application.
 - create a database using Room to store the names and ids of the user's favorite movies (and optionally, the rest of the information needed to display their favorites collection while offline).
 - modify the existing sorting criteria for the main view to include an additional pivot to show their favorites collection.
+
+ ## Technical Concepts learnt in this project
+ - Android Lifecycle
+ - Preferences
+ - Content Providers
+ - Background Tasks
+ - Android Architecture Components (Room and LiveData)
  
  ## Screenshots 
  ![screenshot](https://user-images.githubusercontent.com/38955290/67240240-af5bd600-f416-11e9-96b2-823fb8c2575d.png)

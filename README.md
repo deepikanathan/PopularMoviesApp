@@ -1,5 +1,5 @@
 # PopularMoviesApp_Stage2
-This app is developed as part of a graducation requirement for Android Developer Nanodegree from Udacity. App allows users to discover the most popular movies playing.
+This app is developed as part of a graduation requirement for Android Developer Nanodegree from Udacity. App allows users to discover the most popular movies playing.
  
 ## Project Overview
 In this second and final stage, I've added additional functionality to the app I built in Stage 1.

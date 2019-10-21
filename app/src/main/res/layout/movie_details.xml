@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="movie"
+            type="com.nanodegree.projects.popularmovies.popularmoviesstagetwo.database.Movie" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            tools:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/shareLabel"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/release_date"
+                android:layout_toRightOf="@+id/image"
+                android:text="Share Trailer"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toStartOf="@+id/favoriteButton"
+                app:layout_constraintTop_toBottomOf="@+id/favoriteButton" />
+
+            <TextView
+                android:id="@+id/favoriteLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_below="@id/release_date"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/image"
+                android:text="Favorite?"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/vote"
+                app:layout_constraintTop_toBottomOf="@+id/vote" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:text="@{movie.getTitle()}"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/heading_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="185dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/title"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:imageUrl="@{movie.getImageURL()}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+            <TextView
+                android:id="@+id/release_dateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/image"
+                android:text="@string/movie_detail_release_date_label"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="@+id/image" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/release_dateLabel"
+                android:layout_toRightOf="@+id/image"
+                android:text="@{movie.getReleaseDate()}"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/release_dateLabel"
+                app:layout_constraintTop_toBottomOf="@+id/release_dateLabel"
+                tools:text="2018-1-1" />
+
+            <TextView
+                android:id="@+id/VoteLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/release_date"
+                android:layout_toRightOf="@+id/image"
+                android:text="@string/movie_detail_vote_label"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toStartOf="@+id/release_date"
+                app:layout_constraintTop_toBottomOf="@+id/release_date" />
+
+            <TextView
+                android:id="@+id/vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/VoteLabel"
+                android:layout_toRightOf="@+id/image"
+                android:text="@{movie.getRating()}"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/VoteLabel"
+                app:layout_constraintTop_toBottomOf="@+id/VoteLabel" />
+
+
+            <Button
+                android:id="@+id/favoriteButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="185dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/vote"
+                android:layout_gravity="start|center"
+                android:layout_toRightOf="@+id/image"
+                android:text="@string/add_to_favorites"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toStartOf="@+id/favoriteLabel"
+                app:layout_constraintTop_toBottomOf="@+id/favoriteLabel" />
+
+            <TextView
+                android:id="@+id/plot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{movie.getPlot()}"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/shareButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="@+id/shareLabel"
+                app:layout_constraintTop_toBottomOf="@+id/shareLabel"
+                app:srcCompat="@drawable/ic_share_black_24dp" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/trailersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/trailerLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold"
+            android:text="@string/trailers"
+            tools:text="Trailers"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trailerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/reviewsLayout">
+
+        <TextView
+            android:id="@+id/reviewLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold"
+            android:text="@string/reviews"
+            tools:text="Reviews"
+            android:visibility="invisible"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reviewRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

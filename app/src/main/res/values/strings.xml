@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="title_settings_activity">Settings</string>
+    <string name="settings_menu_label">Settings</string>
+    <string name="movie_intent_data">MOVIE_PARCEL</string>
+    <string name="movies_database">movies_db</string>
+
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+
+    <!--List Preference Key and value set-->
+    <string name="most_popular">Most Popular</string>
+    <string name="highest_rated">Top Rated</string>
+    <string name="favorites">Favorites</string>
+    <string name="most_popular_value" translatable="false">most_popular</string>
+    <string name="highest_rated_value" translatable="false">highest_rated</string>
+    <string name="favorites_value" translatable="false">favorites</string>
+
+    <string name="sort_order_key">SORT_ORDER</string>
+    <string name="sort_order_title">Sort Criteria</string>
+    <string name="sort_order_summary">sort movies by most popular or highest rated</string>
+    <string name="movie_detail_title_label">Title</string>
+    <string name="movie_detail_release_date_label">Release Date</string>
+    <string name="movie_detail_vote_label">Vote</string>
+
+    <string name="api_key">f700b19d1af0889265b81cb218235275</string>
+
+
+     <!--Messages-->
+
+    <!--<string name="no_more_data_to_load">You do not have any more data now!!</string>-->
+    <string name="network_error">Please check your network connection and try again.</string>
+    <string name="network_empty_message">The application did not find any movies. Please try again later.</string>
+    <string name="database_empty_message">The application did not find any favorites movie. Please change the search criteria from the Settings menu and try again.</string>
+    <string name="reviews_empty_message">No reviews found.</string>
+    <string name="trailers_empty_message">No trailers found.</string>
+
+    <string name="share_subject">Movie Trailer</string>
+    <string name="share_title">Share options</string>
+
+</resources>

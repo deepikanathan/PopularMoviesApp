@@ -16,8 +16,6 @@ In this second and final stage, I've added additional functionality to the app I
 
 ![screenshot](https://user-images.githubusercontent.com/38955290/67240254-b2ef5d00-f416-11e9-8403-09bc11288c8d.png)
 
-![screenshot](https://user-images.githubusercontent.com/38955290/67240254-b2ef5d00-f416-11e9-8403-09bc11288c8d.png)
-
 ![screenshot](https://user-images.githubusercontent.com/38955290/67240260-b5ea4d80-f416-11e9-828b-8312e86f1228.png)
 
 ![screenshot](https://user-images.githubusercontent.com/38955290/67240268-ba166b00-f416-11e9-98e0-d18474e44054.png)
